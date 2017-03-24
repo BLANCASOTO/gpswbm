@@ -1,23 +1,32 @@
 <?php
-	$id = $_REQUEST['id'];
+    $id_usuario = $_REQUEST['id_usuario'];
 
-	$nombre = $_POST['nombre'];
-	$descripcion = $_POST['descripcion'];
-	$existencias = $_POST['existencias'];
-	$precio_compra = $POST['precio_compra'];
-	$precio_venta = $POST['precio_venta'];
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $contrasena = $_POST['contrasena'];
+    $tipo_usuario = $_POST['tipo_usuario'];
+
+    $fk_tipo_usuarios = '0'
+
+    switch ($tipo_usuario) {
+        case 'Administrador':
+            $fk_tipo_usuarios = '1'
+            break;
+        case 'Estandar':
+            $fk_tipo_usuarios = '2'
+            break;
+        case 'Invitado':
+            $fk_tipo_usuarios = '3'
+            break;        
+    }
 
     include ("conexion.php");
 
     mysql_connect($puerto,$usuario,$contrasena);
-   	mysql_select_db("examen");
+    mysql_select_db("examen");
 
-    mysql_query("UPDATE productos SET nombre='$nombre' WHERE id_producto='$id'");
-    mysql_query("UPDATE productos SET descripcion='$descripcion' WHERE id_producto='$id'");
-    mysql_query("UPDATE productos SET nombre='$nombre' WHERE id_producto='$id'");
-    mysql_query("UPDATE productos SET existencias='$existencias' WHERE id_producto='$id'");
-    mysql_query("UPDATE productos SET precio_compra='$precio_compra' WHERE id_producto='$id'");
-    mysql_query("UPDATE productos SET precio_venta='$precio_venta' WHERE id_producto='$id'");
+    mysql_query("INSERT INTO usuarios(nombre,email,contrasena,fk_tipo_usuarios)
+        VALUES ('$nombre','$email','$contrasena',$fk_tipo_usuarios");
 
-    echo '<a href="/examen/index.php">volver</a>'
+    header("Location: ../todos_usuarios.php");
 ?>

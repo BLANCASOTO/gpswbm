@@ -42,24 +42,23 @@
     </nav>
     <div class="container">
       <div class="well well-lg">
-        <form role="form" name="form_edita_usuario" action="php/agrega_usuario.php">
+        <form role="form" name="form_agrega_usuario" action="php/agrega_usuario.php">
           <div class="form-group">
             <label>Nombre</label>
-            <input type="email" class="form-control" id="ejemplo_email_1"
-             placeholder="Nombre del usuario">
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del usuario">
             <p class="help-block">Asegurese que el nombre sea menor a  30 caracteres.</p>
           </div>
         <div class="form-group">
           <label>E-mail</label>
-          <input type="email" class="form-control" id="email" placeholder="correo electronico">
+          <input type="email" class="form-control" name="email" id="email" placeholder="correo electronico">
         </div>
         <div class="form-group">
           <label>Contraseña</label>
-          <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
+          <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Contraseña">
         </div>
         <div class="form-group">
           <label>Tipo de usuario</label>
-            <select class="form-control">
+            <select class="form-control" name="tipo_usuario" id="tipo_usuario" >
 
               <?php
                 $query = "SELECT * FROM tipos_usuarios";
