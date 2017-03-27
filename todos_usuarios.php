@@ -5,7 +5,7 @@
   $conexion = mysql_connect($puerto,$usuario,$contrasena);
   mysql_select_db($db_name);
 
-  $query = "SELECT U.nombre,U.email,U.contrasena,TU.tipo_usuario
+  $query = "SELECT U.nombre,U.email,U.contrasena,TU.tipo_usuario,U.id_usuario
   FROM usuarios U, tipos_usuarios TU
   WHERE TU.id_tipo_usuario = U.fk_tipo_usuarios";
   $result = mysql_query($query);
@@ -54,7 +54,7 @@
           ?>
           <div class="col-sm-4">
             <div class="panel panel-default">
-              <button onclick="window.location.href='editar.php?id=<?php echo $registro[0];?>'" class="btn btn-default btn-block">
+              <button onclick="window.location.href='editar_usuario.php?id=<?php echo $registro[4];?>'" class="btn btn-default btn-block">
                 <h3><?php echo $registro[0]?></h3>
               </button>
               <p>email: <?php echo $registro[1]?></p>
