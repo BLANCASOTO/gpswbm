@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
   include ("php/conexion.php");
 
@@ -10,6 +9,7 @@
   WHERE TU.id_tipo_usuario = U.fk_tipo_usuarios";
   $result = mysql_query($query);
 ?>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
