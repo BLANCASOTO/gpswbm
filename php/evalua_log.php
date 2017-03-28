@@ -17,7 +17,7 @@
 
     switch ($registro[0]) {
         case '1':
-            echo 'acceso correcto'/*
+            echo 'acceso correcto';/*
             header('Location: ../todos_usuarios.php');*/
             break;
         case '2':
