@@ -1,3 +1,11 @@
+<?php
+	include("php/conexion.php")
+	    
+	$connection = mysql_connect($db_host, $db_user, $db_password) or die("Connection Error: " . mysql_error());
+	    
+	mysql_select_db($db_name) or die("Error al seleccionar la base de datos:".mysql_error());
+	    @mysql_query("SET NAMES 'utf8'");
+?>
 <!DOCTYPE html>
 <html lang="esp">
 <head>
