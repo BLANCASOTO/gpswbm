@@ -1,1 +1,1 @@
-web:python app.py $PORT
+web: php -S 0.0.0.0:$PORT
