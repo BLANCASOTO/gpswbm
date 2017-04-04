@@ -6,7 +6,7 @@ create database gpswbm;
 		tipo_usuario char(13)
 		);
 
-	insert into tipos_usuarios(tipo_usuario) values ('Administrador'),('Estandar'),('Invitado');
+	insert into tipos_usuarios values (1,'Administrador'),(2,'Estandar'),(3,'Invitado');
 
 	create table usuarios(
 		id_usuario int(3) not null auto_increment primary key,
@@ -27,7 +27,7 @@ create database gpswbm;
 		medida char(3)
 		);
 
-	insert into medidas(medida) values('met'),('km'),('hrs'),('min'),('seg');
+	insert into medidas(medida) values(1,'met'),(2,'km'),(3,'hrs'),(4,'min'),(5,'seg');
 
 	create table rutas(
 		id_rutas int(4) not null auto_increment primary key,

@@ -54,7 +54,7 @@
           ?>
           <div class="col-sm-4">
             <div class="panel panel-default">
-              <button onclick="window.location.href='editar_usuario.php?id=<?php echo $registro[4];?>'" class="btn btn-default btn-block">
+              <button onclick="window.location.href='usuario.php?id=<?php echo $registro[4];?>'" class="btn btn-default btn-block">
                 <h3><?php echo $registro[0]?></h3>
               </button>
               <p>email: <?php echo $registro[1]?></p>

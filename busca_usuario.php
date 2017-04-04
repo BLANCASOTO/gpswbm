@@ -9,7 +9,7 @@
   $query = "SELECT U.nombre,U.email,U.contrasena,TU.tipo_usuario, U.id_usuario
   FROM usuarios U, tipos_usuarios TU
   WHERE TU.id_tipo_usuario = U.fk_tipo_usuarios and
-  TU.tipo_usuario = '$parametro'
+  U.nombre = '$parametro'
   GROUP BY U.id_usuario";
   $result = mysql_query($query);
 ?>
@@ -32,7 +32,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="index.php" class="navbar-brand">GPS-Warning BM</a>
+        <a href="todos_usuarios.php" class="navbar-brand">GPS-Warning BM</a>
       </div>
       <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">

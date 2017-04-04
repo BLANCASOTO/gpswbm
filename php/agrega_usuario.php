@@ -6,17 +6,17 @@
     $contrasena = $_POST['contrasena'];
     $tipo_usuario = $_POST['tipo_usuario'];
 
-    $fk_tipo_usuarios = '0'
+    $fk_tipo_usuarios = '0';
 
     switch ($tipo_usuario) {
         case 'Administrador':
-            $fk_tipo_usuarios = '1'
+            $fk_tipo_usuarios = '1';
             break;
         case 'Estandar':
-            $fk_tipo_usuarios = '2'
+            $fk_tipo_usuarios = '2';
             break;
         case 'Invitado':
-            $fk_tipo_usuarios = '3'
+            $fk_tipo_usuarios = '3';
             break;        
     }
 

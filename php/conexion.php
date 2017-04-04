@@ -9,11 +9,6 @@
 	$db_user = $usuario;
 	$db_password = $contrasena;
 
-	$server = $url[$puerto];
-	$username = $url[$usuario];
-	$password = $url[$contrasena];
-	$db = substr($url[$db_name], 1);
-
 //mysql -h edo4plet5mhv93s3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com -u t175x1vm0e1cnb9d -p
 
 	

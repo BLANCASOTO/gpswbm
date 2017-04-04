@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agregar Usuario</title>
+    <title>Agregar Ruta</title>
     <link rel="icon" type="image/ico" href="images/logo.ico" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -42,7 +42,7 @@
     </nav>
     <div class="container">
       <div class="well well-lg">
-        <form role="form" name="form_agrega_usuario" action="php/agrega_usuario.php">
+        <form role="form" name="form_agrega_ruta" action="php/agrega_ruta.php?id_usuario=<?php echo $id_usuario ?>">
           <div class="form-group">
             <label>Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del usuario">

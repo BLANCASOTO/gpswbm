@@ -5,10 +5,10 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>Agregar Registro</title>
+	    <link rel="icon" type="image/ico" href="images/logo.ico" />
 	    <link href="css/bootstrap.min.css" rel="stylesheet">
 	    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	    <link href="starter-template.css" rel="stylesheet">
-	    <link rel="icon" type="image/png" href="/images/logo.png" />
   	</head>
 	<body>
 	    <nav role="navigation" class="navbar navbar-inverse">

@@ -1,40 +1,4 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Editar usuario</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="starter-template.css" rel="stylesheet">
-    <script src="js/ie-emulation-modes-warning.js"></script>
-  </head>
-
-  <body>
-    <nav role="navigation" class="navbar navbar-default">
-      <div class="navbar-header">
-        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="index.php" class="navbar-brand">GPS-Warning BM</a>
-        </div>
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Inicio</a></li>
-              <li><a href="#">Agregar</a></li>
-              <li><a href="#">Acerca de</a></li>
-          </ul>
-          <form class="navbar-form navbar-right" role="search">
-            <input type="text" class="form-control" placeholder="Buscar">
-            <button type="submit" class="btn btn-default">Enviar</button>
-          </form>
-        </div>            
-    </nav>
-
     <?php
 
       $id = $_REQUEST['id'];
@@ -51,7 +15,41 @@
       $registro = mysql_fetch_array($result);
 
     ?>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php echo $registro[2]; ?></title>
+    <link rel="icon" type="image/ico" href="images/logo.ico" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
 
+  <body>
+    <nav role="navigation" class="navbar navbar-default">
+      <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="todos_usuarios.php" class="navbar-brand">GPS-Warning BM</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="todos_usuarios.php">Inicio</a></li>
+              <li><a href="Agregar_Ruta?id_usuario=<?php echo $registro[0]; ?>">Agregar_Ruta</a></li>
+              <li><a href="#">Acerca de</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <input type="text" class="form-control" placeholder="Buscar">
+            <button type="submit" class="btn btn-default">Enviar</button>
+          </form>
+        </div>            
+    </nav>
     <div class="container">
       <div class="jumbotron">
         <h1><?php echo $registro[1]; ?></h1>
@@ -62,13 +60,13 @@
             </td>
             <td>
               <p class="text-right">
-                <button onclick="window.location.href='editar_usuario.php?id=<?php echo $id?>'" class="btn btn-default">
+                <button onclick="window.location.href='editar_usuario.php?id=<?php echo $registro[0]; ?>'" class="btn btn-default">
                   <span class="glyphicon glyphicon-pencil"></span>
                 </button>
                 <button type="submit" class="btn btn-default">
                   <span class="glyphicon glyphicon-trash"></span>
                 </button>
-                <button type="submit" class="btn btn-default">
+                <button onclick="window.location.href='agregar_ruta.php?id=<?php echo $registro[0]; ?>'" class="btn btn-default">
                   <span class="glyphicon glyphicon-plus"></span>
                 </button>
               </p>
@@ -122,5 +120,5 @@
   <script>window.jQuery || document.write('<script src="//assets/js/vendor/jquery.min.js"><\/script>')</script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/ie10-viewport-bug-workaround.js"></script>
-  
+  <script src="js/ie-emulation-modes-warning.js"></script>
 </html>

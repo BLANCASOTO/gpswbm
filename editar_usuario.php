@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Editar usuario</title>
+    <link rel="icon" type="image/ico" href="images/logo.ico" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="starter-template.css" rel="stylesheet">
@@ -53,16 +54,19 @@
         <table border="0px" class="table">
           <tr>
             <td>
-            <form action="php/editar_usuario.php?id_usuario=<?php echo $registro[0]; ?>" >
+            <form action="php/editar_usuario.php" method="POST" >
               <div class="form-group">
                 <div class="col-xs-3">
-                  <input type="email" id="nombre" name="nombre" class="form-control" placeholder="<?php echo $registro[1]; ?>">
+                  <input type="email" maxlength = "30" id="nombre" name="nombre" class="form-control" value="<?php echo $registro[1]; ?>">
                 </div>
                 <div class="col-xs-3">
-                  <input type="text" id="email" name="email" class="form-control" placeholder="<?php echo $registro[2]; ?>">
+                  <input type="text" maxlength = "30" id="email" name="email" class="form-control" value="<?php echo $registro[2]; ?>">
                 </div>
                 <div class="col-xs-3">
-                  <input type="text" id="contrasena" name="contrasena" class="form-control" placeholder="<?php echo $registro[3]; ?>">
+                  <input type="password" maxlength = "13" id="contrasena" name="contrasena" class="form-control" value="<?php echo $registro[3]; ?>">
+                </div>
+                <div class="col-xs-3">
+                  <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $registro[0]; ?>">
                 </div>
               </div>
             </td>
@@ -72,7 +76,7 @@
                   <span class="glyphicon glyphicon-ok"></span>
                 </button>
                 </form>
-                <button type="submit" class="btn btn-default">
+                <button onclick="window.location.href='usuario.php?id=<?php echo $registro[0];?>'" class="btn btn-default">
                   <span class="glyphicon glyphicon-remove"></span>
                 </button>
               </p>
