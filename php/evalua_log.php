@@ -27,7 +27,6 @@
             echo 'invitado';
             break;        
         default:
-            $sesion='error';
             echo ('error');
             break;
     }
