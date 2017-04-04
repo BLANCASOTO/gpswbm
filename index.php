@@ -1,22 +1,3 @@
-<?php
-	include ("php/conexion.php");
-
-	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-	$server = $url[$server];
-	$username = $url[$username];
-	$password = $url[$password];
-	$db = substr($url[$db], 1);
-
-	// Conectar
-	$mysqli = new mysqli($server, $username, $password, $db);
-
-	//mysqli_report(MYSQLI_REPORT_ERROR);
-
-	// Consulta
-	$stmt = $mysqli->prepare("SELECT * FROM usuarios");
-	$stmt->execute();
-?>
 <!DOCTYPE html>
 <html lang="esp">
 <head>
