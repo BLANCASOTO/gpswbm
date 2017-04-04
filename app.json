@@ -1,6 +1,6 @@
 {
-  "name": "Heroku-PHP",
-  "description": "Plantilla de PHP para Heroku.",
-  "repository": "https://github.com/ijaureguialzo/heroku-php",
+  "name": "GPS Warning - BM",
+  "description": "Administrador de BD",
+  "repository": "https://github.com/MarGaryIto/gpswbmp",
   "addons": []
 }
