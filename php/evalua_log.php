@@ -18,7 +18,7 @@
     switch ($registro[0]) {
         case '1':
             /*echo 'acceso correcto';*/
-            header('Location: ../todos_usuarios.php');
+            echo ('agregado');
             break;
         case '2':
             echo 'estandar';
@@ -28,7 +28,7 @@
             break;        
         default:
             $sesion='error';
-            header('Location: ../sesion_erroneo.php');
+            echo ('error');
             break;
     }
 ?>
